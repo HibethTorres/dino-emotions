@@ -19,11 +19,17 @@ async function handleFetchClick() {
     btn.disabled = true;
     loading.style.display = "block";
 
+
+let getEmotion = document.getElementById("emotion");
+let value = getEmotion.value;
+let text = getEmotion.options[getEmotion.selectedIndex].text;
+
+
     try {
-        if (Happy) {
+        if (getEmotion.value === "happy") {
             img.src = "happy.jpg";  
         } else {
-            img.src = "sad.jpg";   
+            img.src = "sad.png";   
         }
 
     } catch (error) {
