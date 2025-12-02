@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino-emotions project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="gui-container">
+        <h1 class="title1">How are you feeling today?</h1>
+
+    <div class="input-group">
+            <label for="emotion-selection">Select your emotional state</label>
+            <select name="emotion" id="emotion">
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+            </select>
+    </div>
+
+        <button class="btn-primary" id="fetch-btn" onclick="handleFetchClick()">Enter</button>
+        <p id="loading-message" style="display:none;">Loading...</p>
+        <img id="heartImage" src="default.jpg" alt="Emotion">
+        <div id="emotion-result" class="result-box hidden">
+             <p>Ready for your dino?</p>
+        </div>
+
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
